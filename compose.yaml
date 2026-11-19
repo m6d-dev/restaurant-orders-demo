@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: restaurant-orders-demo
+    container_name: restaurant-orders-demo
+    ports:
+      - "${PORT:-3000}:3000"
+    restart: unless-stopped
